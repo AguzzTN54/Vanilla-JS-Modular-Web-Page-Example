@@ -1,0 +1,237 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+// Color
+$primary-color: #573D81;
+$secondary-color: #9D388D;
+$tertiary-color: #E13782;
+$info-color: #2568D5;
+$success-color: #31AB53;
+$warning-color: #ffc01f;
+$danger-color: #EA3338;
+
+$gray: #f9f9f9;
+$white: #ffffff;
+$dark: #0f0f0f;
+$tablet: 812px;
+$mobile: 425px;
+
+@mixin flex($justify-content:0, $align-items:0, $direction:0, $wrap:0, $display:flex) {
+  @if($display !=0) {
+    display: $display;
+  }
+
+  @if($justify-content !=0) {
+    justify-content: $justify-content;
+  }
+
+  @if($align-items !=0) {
+    align-items: $align-items;
+  }
+
+  @if($direction !=0) {
+    flex-direction: $direction;
+  }
+
+  @if($wrap !=0) {
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin wh($width: false, $height:false) {
+  @if($width) {
+    width: $width;
+  }
+
+  @if($height=='w') {
+    height: $width;
+  }
+
+  @else if($height) {
+    height: $height;
+  }
+}
+
+@mixin posisi($top:false, $right:false, $bottom:false, $left:false) {
+  @if($top) {
+    top: $top;
+  }
+
+  @if($right) {
+    right: $right;
+  }
+
+  @if($bottom) {
+    bottom: $bottom;
+  }
+
+  @if($left) {
+    left: $left;
+  }
+}
+
+@mixin radius($topL:false, $topR:false, $bottomR:false, $bottomL:false) {
+  @if($topL) {
+    border-top-left-radius: $topL;
+  }
+
+  @if($topR) {
+    border-top-right-radius: $topR;
+  }
+
+  @if($bottomR) {
+    border-bottom-right-radius: $bottomR;
+  }
+
+  @if($bottomL) {
+    border-bottom-left-radius: $bottomL;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fffefa;
+  line-height: 1.8em;
+  letter-spacing: 0.05rem;
+}
+
+$warna: "primary"$primary-color,
+"secondary"$secondary-color,
+"tertiary"$tertiary-color,
+"info"$info-color,
+"success"$success-color,
+"warning"$warning-color,
+"danger"$danger-color,
+"white"$white,
+"dark"$dark;
+
+@each $txt,
+$color in $warna {
+  .txt-#{$txt} {
+    color: $color;
+  }
+
+  .bg-#{$txt} {
+    background-color: $color;
+  }
+}
+
+.btn {
+  color: $white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  transition: .2s;
+
+  @each $txt,
+  $color in $warna {
+    &.btn-#{$txt} {
+      background-color: $color;
+
+      &:hover {
+        background-color: darken($color, 5%);
+      }
+    }
+  }
+}
+
+$text-alignment:left,
+center,
+right,
+justify;
+
+@each $align in $text-alignment {
+  .txt-#{$align} {
+    text-align: $align;
+  }
+}
+
+$jarak: '0'0px,
+'1'10px,
+'2'20px,
+'3'30px,
+'4'40px,
+'5'50px;
+
+@each $class,
+$jarak in $jarak {
+  .m-#{$class} {
+    margin: $jarak;
+  }
+
+  .mt-#{$class} {
+    margin-top: $jarak;
+  }
+
+  .mb-#{$class} {
+    margin-bottom: $jarak;
+  }
+
+  .ml-#{$class} {
+    margin-left: $jarak;
+  }
+
+  .mr-#{$class} {
+    margin-right: $jarak;
+  }
+
+  .p-#{$class} {
+    padding: $jarak;
+  }
+
+  .pt-#{$class} {
+    padding-top: $jarak;
+  }
+
+  .pb-#{$class} {
+    padding-bottom: $jarak;
+  }
+
+  .pl-#{$class} {
+    padding-left: $jarak;
+  }
+
+  .pr-#{$class} {
+    padding-right: $jarak;
+  }
+}
+
+.d-flex {
+  display: flex;
+
+  &.content-center {
+    justify-content: center;
+  }
+
+  &.items-center {
+    align-items: center;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.container {
+  margin: 50px;
+  max-width: 998px;
+  margin: auto;
+}
+
+.rounded {
+  border-radius: 7px;
+}

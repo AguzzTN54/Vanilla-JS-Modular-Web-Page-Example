@@ -1,0 +1,282 @@
+header {
+  width: 100%;
+  background-color: $gray;
+}
+
+nav {
+  @include flex(center, center, 0, nowrap);
+  position: relative;
+  z-index: 1000;
+  font-size: large;
+  padding: 15px 70px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+
+  &.fixed {
+    background-color: $primary-color;
+    box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  a {
+    color: $white;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .brand {
+    font-size: 20px;
+    color: $white;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-content {
+    margin-left: auto;
+
+    .navbar-item {
+      margin: 0 15px;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0%;
+        margin: auto;
+        padding-bottom: 5px;
+        border-bottom: 1.5px solid $warning-color;
+        transition: all 0.1s;
+      }
+
+      &:hover::after {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.jumbotron {
+  @include flex(0, center, 0, nowrap);
+  position: relative;
+  height: 500px;
+  margin-top: -70px;
+  color: $white;
+  border-bottom: 4px solid $secondary-color;
+  background-image: url(../images/medical.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    @include wh(100%, "w");
+    background-image: linear-gradient(135deg,
+        rgba(darken($primary-color, 30%), 0.9),
+        rgba($secondary-color, 0.9));
+    position: absolute;
+    @include posisi(0, 0, 0, 0);
+    background-size: 150%;
+    animation: bg-ease 10s infinite;
+  }
+
+  .main-pic {
+    position: inherit;
+    margin-top: 50px;
+
+    img {
+      margin-top: 100px;
+      margin-left: 100px;
+      max-width: 100%;
+      position: inherit;
+      z-index: +1;
+    }
+  }
+
+  .jumbotron-text {
+    @include flex(center, 0, column);
+    @include wh(100%, "w");
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: +1;
+
+    h1 {
+      font-size: 1.2cm;
+      line-height: 60px;
+    }
+  }
+}
+
+// TABLET
+@media screen and (max-width: $tablet) {
+  nav {
+    position: relative;
+    padding: 15px 0 !important;
+    @include flex(space-between);
+
+    .brand {
+      margin: 0 20px;
+    }
+
+    .navbar-toggle {
+      @include flex(center, center, 0, 0, flex !important);
+      @include wh(40px, "w");
+      position: relative;
+      z-index: 100;
+      margin: 0 20px;
+      border: none;
+      background-color: transparent;
+      transition: all 0.2s;
+      cursor: pointer;
+
+      span {
+        @include wh(5px, 5px);
+        display: block;
+        background-color: $white;
+        border-radius: 100%;
+        transition: .2s;
+
+        &::before,
+        &::after {
+          content: "";
+          display: inherit;
+          @include wh(inherit, "w");
+          background-color: inherit;
+          border-radius: inherit;
+          transition: inherit;
+        }
+
+        &::before {
+          margin-top: -10px;
+        }
+
+        &::after {
+          margin-top: 16px;
+        }
+      }
+
+      &.close {
+        @include flex(flex-start);
+        padding: 3px;
+        transition: inherit;
+
+        &>span {
+          @include wh(0 !important, 'w');
+
+          &::after,
+          &::before {
+            @include wh(35px, 5px);
+            border-radius: unset;
+          }
+
+          &::before {
+            transform: rotate(45deg);
+            margin-top: 0;
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+            margin-bottom: 0;
+            margin-top: -5px;
+          }
+        }
+      }
+    }
+
+    .navbar-content {
+      @include flex(center, center, column, 0, none);
+      @include wh(100vw, 100vh);
+      @include posisi(0, 0);
+      opacity: 0;
+      position: absolute;
+      padding-top: 70px;
+      background-image: linear-gradient(135deg,
+          $primary-color,
+          $secondary-color);
+      background-size: 120%;
+
+      a {
+        color: $white;
+        opacity: unset;
+      }
+
+      &.show {
+        animation: fadeIn linear 0.5s;
+        display: inherit;
+        opacity: 1;
+      }
+
+      .navbar-item {
+        padding: 15px;
+        width: 80%;
+        text-align: center;
+        margin: 2px 0 !important;
+        border-radius: 25px;
+        transition: all 0.3s;
+
+        &.active,
+        &:hover {
+          background-color: $white;
+          color: $primary-color;
+        }
+
+        &::after {
+          content: unset !important;
+        }
+      }
+    }
+  }
+
+  .jumbotron {
+    .main-pic {
+      margin-left: -4cm;
+    }
+
+    .jumbotron-text {
+      h1 {
+        transform: scale(0.8);
+      }
+
+      .nama {
+        margin: -10px 0px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: $mobile) {
+  .jumbotron {
+    @include flex(space-around, flex-start, column-reverse);
+    height: 100vh !important;
+
+    .main-pic {
+      width: 150px;
+      margin: unset;
+
+      img {
+        margin-top: -160px !important;
+        margin-left: -20px;
+      }
+    }
+
+    .jumbotron-text {
+      margin-top: 100px;
+
+      h1 {
+        transform: scale(0.7);
+      }
+
+      .d-flex {
+        >div {
+          margin: 5px !important;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
