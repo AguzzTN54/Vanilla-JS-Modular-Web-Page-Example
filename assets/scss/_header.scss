@@ -14,7 +14,7 @@ nav {
 
   &.fixed {
     background-color: $primary-color;
-    box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.1);
+    @extend .shadow;
   }
 
   a {
@@ -127,7 +127,7 @@ nav {
       @include wh(40px, "w");
       position: relative;
       z-index: 100;
-      margin: 0 20px;
+      margin: 0 15px;
       border: none;
       background-color: transparent;
       transition: all 0.2s;

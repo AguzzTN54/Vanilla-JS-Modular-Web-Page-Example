@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
 
-  <link rel="stylesheet" href="assets/stylesheet/style.css">
+  <link rel="stylesheet" href="assets/stylesheet/particles.css" />
+  <link rel="stylesheet" href="assets/stylesheet/flags.css" />
+  <link rel="stylesheet" href="assets/stylesheet/style.css" />
 </head>
 
 <body>
-
   <!-- header -->
   <header id="header">
     <nav>
@@ -20,15 +21,39 @@
       <button class="navbar-toggle"><span></span></button>
       <div class="navbar-content">
         <a href="#header" class="navbar-item active">Home</a>
-        <a href="#footer" class="navbar-item">Persebaran</a>
-        <a href="#articles" class="navbar-item">Gejala</a>
-        <a href="#author" class="navbar-item">Pencegahan</a>
+        <a href="#persebaran" class="navbar-item">Persebaran</a>
+        <a href="#gejala" class="navbar-item">Gejala</a>
+        <a href="#pencegahan" class="navbar-item">Pencegahan</a>
       </div>
     </nav>
 
     <div class="jumbotron">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
       <div class="main-pic">
-        <img src="assets/images/flu-girl.svg" alt="Flu Girl" class="flip-x">
+        <img src="assets/images/flu-girl.svg" alt="Flu Girl" class="flip-x" />
       </div>
       <div class="jumbotron-text pt-3">
         <h1 class="nama">Corona Virus Disease</h1>
@@ -50,13 +75,241 @@
           </div>
         </div>
         <div class="d-block mt-2">
-          <a href="#" class="btn btn-info p-1 pl-5 pr-5" style="width:min-content">Persebaran</a>
+          <a href="#" class="btn btn-info p-1 pl-5 pr-5" style="width: min-content;">Persebaran</a>
         </div>
       </div>
     </div>
   </header>
   <!-- Akhir Header -->
 
+  <main class="container">
+    <!-- Select Box -->
+    <div class="select-country mt-3" id="persebaran">
+      <h3 class="heading heading-2 txt-center strong">Pilih Negara</h3>
+      <div class="selected shadow">
+        GLOBAL
+      </div>
+      <span class="d-block txt-center" style="font-size: 0.9em; position: relative; z-index: -1;">Sumber :
+        <a href="#" target="_blank" rel="noopener noreferrer">http://ikilh.me</a></span>
+
+      <country-list class="hide">
+        <div>
+          <div class="input">
+            <input type="text" class="search-country" placeholder="Cari Negara" />
+          </div>
+          <country-item country-id="en"><i class="flag flag-en"></i> English</country-item>
+          <country-item country-id="it"><i class="flag flag-it"></i> Italia</country-item>
+          <country-item country-id="id"><i class="flag flag-in"></i> India</country-item>
+          <country-item country-id="en"><i class="flag flag-en"></i> English</country-item>
+          <country-item country-id="it"><i class="flag flag-it"></i> Italia</country-item>
+          <country-item country-id="id"><i class="flag flag-in"></i> India</country-item>
+        </div>
+      </country-list>
+    </div>
+    <!-- Akhir Select Box -->
+
+    <!-- Country List -->
+    <case-list class="d-flex">
+      <case-item class="shadow rounded">
+        <img src="assets/images/provinsi/aceh.svg" alt="Aceh" />
+        <h3 class="heading heading-1 strong">Aceh</h3>
+        <div class="cases txt-center txt-white mt-1">
+          <div class="confirm bg-warning rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Konfirmasi</span>
+          </div>
+          <div class="death bg-danger rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Meninggal</span>
+          </div>
+          <div class="recover bg-success rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Sembuh</span>
+          </div>
+        </div>
+        <span class="d-block txt-right pt-1 bg-white">
+          More: <a href="#">http://acehprov.go.id</a>
+        </span>
+      </case-item>
+
+      <case-item class="shadow rounded">
+        <img src="assets/images/provinsi/di-yogyakarta.svg" alt="Aceh" />
+        <h3 class="heading heading-1 strong">Aceh</h3>
+        <div class="cases txt-center txt-white mt-1">
+          <div class="confirm bg-warning rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Konfirmasi</span>
+          </div>
+          <div class="death bg-danger rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Meninggal</span>
+          </div>
+          <div class="recover bg-success rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Sembuh</span>
+          </div>
+        </div>
+        <span class="d-block txt-right pt-1 bg-white">
+          More: <a href="#">http://acehprov.go.id</a>
+        </span>
+      </case-item>
+
+      <case-item class="shadow rounded">
+        <img src="assets/images/provinsi/jawa-timur.svg" alt="Aceh" />
+        <h3 class="heading heading-1 strong">Aceh</h3>
+        <div class="cases txt-center txt-white mt-1">
+          <div class="confirm bg-warning rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Konfirmasi</span>
+          </div>
+          <div class="death bg-danger rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Meninggal</span>
+          </div>
+          <div class="recover bg-success rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Sembuh</span>
+          </div>
+        </div>
+        <span class="d-block txt-right pt-1 bg-white">
+          More: <a href="#">http://acehprov.go.id</a>
+        </span>
+      </case-item>
+
+      <case-item class="shadow rounded">
+        <img src="assets/images/provinsi/bali.svg" alt="Aceh" />
+        <h3 class="heading heading-1">Aceh</h3>
+        <div class="cases txt-center txt-white mt-1">
+          <div class="confirm bg-warning rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Konfirmasi</span>
+          </div>
+          <div class="death bg-danger rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Meninggal</span>
+          </div>
+          <div class="recover bg-success rounded p-1">
+            <h2 class="mb-1">1293</h2>
+            <span>Sembuh</span>
+          </div>
+        </div>
+        <span class="d-block txt-right pt-1 bg-white">
+          More: <a href="#">http://acehprov.go.id</a>
+        </span>
+      </case-item>
+    </case-list>
+    <!-- Akhir Country List -->
+  </main>
+
+  <section class="bg-white mt-3" id="gejala">
+    <div class="container pt-1 pb-2">
+      <h2 class="heading heading-2">GEJALA</h2>
+      <div class="d-flex gejala">
+        <gejala-list class="txt-center">
+          <gejala-item class="p-1">
+            <figure>
+              <img src="assets/images/gejala/batuk.svg" alt="batuk" />
+            </figure>
+            <figcaption class="d-block txt-primary strong">Batuk</figcaption>
+          </gejala-item>
+
+          <gejala-item class="p-1">
+            <figure>
+              <img src="assets/images/gejala/sakit-tenggorokan.svg" alt="Sakit Tenggorokan" />
+            </figure>
+            <figcaption class="d-block txt-primary strong">
+              Sakit Tenggorokan
+            </figcaption>
+          </gejala-item>
+
+          <gejala-item class="p-1">
+            <figure>
+              <img src="assets/images/gejala/sesak-nafas.svg" alt="Sesak Nafas" />
+            </figure>
+            <figcaption class="d-block txt-primary strong">
+              Sesak Nafas
+            </figcaption>
+          </gejala-item>
+
+          <gejala-item class="p-1">
+            <figure>
+              <img src="assets/images/gejala/demam.svg" alt="Demam" />
+            </figure>
+            <figcaption class="d-block txt-primary strong">Demam</figcaption>
+          </gejala-item>
+        </gejala-list>
+
+        <aside style="flex-basis: 30%;">
+          <div class="rounded bg-primary mb-2 p-1 txt-white txt-center d-flex items-center" style="height: 100%;">
+            <div>
+              <h3 class="heading strong">Merasa Kurang Sehat ?</h3>
+              <p class="heading mt-2 mb-2 ml-1 mr-1">
+                Segera Hubungi Tim Kesehatan Terdekat
+              </p>
+              <a class="btn btn-tertiary d-block"> Hubungi 119</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mt-4" id="pencegahan">
+    <h2 class="heading heading-2 strong">Pencegahan</h2>
+    <cegah-list class="txt-center">
+      <cegah-item>
+        <figure>
+          <img src="assets/images/pencegahan/cuci-tangan.svg" alt="Cuci tangan" />
+        </figure>
+        <figcaption class="d-block txt-primary strong">
+          Cuci Tangan
+        </figcaption>
+      </cegah-item>
+
+      <cegah-item>
+        <figure>
+          <img src="assets/images/pencegahan/cuci-tangan.svg" alt="Cuci tangan" />
+        </figure>
+        <figcaption class="d-block txt-primary strong">
+          Cuci Tangan
+        </figcaption>
+      </cegah-item>
+
+      <cegah-item>
+        <figure>
+          <img src="assets/images/pencegahan/cuci-tangan.svg" alt="Cuci tangan" />
+        </figure>
+        <figcaption class="d-block txt-primary strong">
+          Cuci Tangan
+        </figcaption>
+      </cegah-item>
+
+      <cegah-item>
+        <figure>
+          <img src="assets/images/pencegahan/cuci-tangan.svg" alt="Cuci tangan" />
+        </figure>
+        <figcaption class="d-block txt-primary strong">
+          Cuci Tangan
+        </figcaption>
+      </cegah-item>
+      <cegah-item>
+        <figure>
+          <img src="assets/images/pencegahan/cuci-tangan.svg" alt="Cuci tangan" />
+        </figure>
+        <figcaption class="d-block txt-primary strong">
+          Cuci Tangan
+        </figcaption>
+      </cegah-item>
+    </cegah-list>
+  </section>
+
+  <footer class="txt-center bg-primary txt-white p-3 mt-5">
+    <a href="#header" class="munggah">^</a>
+    <span class="d-block">Reference :
+      <a href="http://covid19.go.id" class="txt-white" target="_blank"
+        rel="noopener noreferrer"><b>covid19.go.id</b></a></span>
+    <span>Created by <b>AguzzTN54</b></span>
+  </footer>
 
   <script src="assets/js/script.js"></script>
 </body>
