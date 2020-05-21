@@ -7,4 +7,13 @@ const buatELement = (namaEl, target) => {
   })
 }
 
-export default buatELement
+const showHide = () => {
+  const list = document.querySelector("country-list")
+  list.classList.toggle("hide");
+  list.classList.toggle("show");
+};
+
+export {
+  buatELement,
+  showHide
+}

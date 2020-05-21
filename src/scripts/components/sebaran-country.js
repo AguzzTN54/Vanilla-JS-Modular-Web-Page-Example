@@ -1,4 +1,8 @@
+import {
+  showHide
+} from '../functions'
 import "./sebaran-country-item";
+import dataCountry from '../data/country-list'
 
 class selectCountry extends HTMLElement {
   constructor() {
@@ -14,7 +18,9 @@ class selectCountry extends HTMLElement {
     this.innerHTML = `<div>
       <div class="input">
         <input type="text" class="search-country" placeholder="Cari Negara" />
-      </div>
+        </div>
+        <country-item class="is-selected" country-id="global">GLOBAL</country-item>
+        <country-item country-id="id"><i class="flag flag-id"></i> INDONESIA</country-item>
     </div>`
 
     const data = Object.entries(this._countries)
@@ -23,28 +29,14 @@ class selectCountry extends HTMLElement {
       listElement.country = country;
       this.querySelector('div').appendChild(listElement)
     });
-    const select = document.querySelectorAll("country-item"),
-      search = document.querySelector(".search-country");
 
-    for (let i = 0; i < select.length; i++) {
-      select[i].addEventListener("click", function () {
-        const isSelected = document.querySelector(".is-selected"),
-          name = this.innerHTML;
-
-        if (isSelected) {
-          isSelected.classList.remove("is-selected");
-        }
-
-        selected.innerHTML = name;
-        this.classList.add("is-selected");
-        showHide();
-      });
-    }
+    // Mengambil nilai dari input nama negara
+    const search = document.querySelector(".search-country");
 
     search.addEventListener("keyup", function () {
       const filter = this.value.toUpperCase();
       for (let i = 0; i < select.length; i++) {
-        txtValue = select[i].textContent || select[i].innerText;
+        let txtValue = select[i].textContent || select[i].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
           select[i].style.display = "";
         } else {
@@ -52,6 +44,25 @@ class selectCountry extends HTMLElement {
         }
       }
     });
+
+    const select = document.querySelectorAll("country-item")
+
+    for (let i = 0; i < select.length; i++) {
+      select[i].addEventListener("click", function () {
+        const isSelected = document.querySelector(".is-selected"),
+          name = this.innerHTML,
+          countryId = this.getAttribute('country-id');
+
+        if (isSelected) {
+          isSelected.classList.remove("is-selected");
+        }
+        document.querySelector(".selected").innerHTML = name;
+        this.classList.add("is-selected");
+        showHide();
+
+        dataCountry.getCaseData(countryId)
+      });
+    }
   }
 }
 

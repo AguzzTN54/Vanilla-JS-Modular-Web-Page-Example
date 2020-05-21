@@ -1,4 +1,6 @@
-import buatELement from '../functions'
+import {
+  buatELement
+} from '../functions'
 
 const kepala = (async () => {
   document.body.innerHTML = ''

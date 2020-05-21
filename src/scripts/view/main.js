@@ -1,6 +1,6 @@
 import '../data/country-list'
 import '../components/header'
-import '../components/sebaran'
+import '../components/kasus'
 import dataCountry from '../data/country-list';
 
 const main = function () {

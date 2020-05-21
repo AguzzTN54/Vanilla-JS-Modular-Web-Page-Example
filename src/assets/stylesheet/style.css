@@ -864,6 +864,7 @@ case-list case-item img, case-list case-item .cases case-item img {
   right: 0;
   width: auto;
   height: 50%;
+  max-width: 80%;
   z-index: -1;
   opacity: 0.5;
 }
