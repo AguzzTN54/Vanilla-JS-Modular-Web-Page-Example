@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{59:function(s,a,e){"use strict";e.r(a),a.default=e.p+"assets/gejala/sesak-nafas.svg"}}]);

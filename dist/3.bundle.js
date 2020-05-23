@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{57:function(s,a,e){"use strict";e.r(a),a.default=e.p+"assets/gejala/demam.svg"}}]);

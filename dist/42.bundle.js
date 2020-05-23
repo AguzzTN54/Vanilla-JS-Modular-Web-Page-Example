@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[42],{50:function(s,n,e){"use strict";e.r(n),n.default=e.p+"assets/provinsi/sulawesi-tengah.svg"}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{58:function(s,a,n){"use strict";n.r(a),a.default=n.p+"assets/gejala/sakit-tenggorokan.svg"}}]);
