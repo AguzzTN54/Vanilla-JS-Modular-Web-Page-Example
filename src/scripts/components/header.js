@@ -24,6 +24,36 @@ const navbar = async () => {
       <a href="#gejala" class="navbar-item">Gejala</a>
       <a href="#pencegahan" class="navbar-item">Pencegahan</a>
     </div>`
+
+  navbarResponsive()
+}
+
+const navbarResponsive = () => {
+  const toggle = document.querySelector(".navbar-toggle"),
+    navbar = document.querySelector(".navbar-content"),
+    navbarItem = document.querySelectorAll('.navbar-item')
+
+  navbarItem.forEach(navItem => {
+    navItem.addEventListener('click', function () {
+      const active = document.querySelector('.active')
+      active.classList.remove('active')
+
+      this.classList.add('active')
+      toggle.classList.remove("close")
+      navbar.classList.remove("show")
+    })
+  })
+
+  toggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (toggle.classList.contains("close")) {
+      toggle.classList.remove("close")
+      navbar.classList.remove("show")
+    } else {
+      toggle.classList.add("close")
+      navbar.classList.add("show")
+    }
+  });
 }
 
 const jumbotron = async () => {
@@ -48,16 +78,16 @@ const jumbotron = async () => {
       <h4 class="greet txt-primary txt-white mt-2">GLOBALS</h4>
       <div class="d-flex content-center items-center wrap">
         <div class="bg-warning text-white m-1 p-1 pl-2 pr-2 rounded">
-          <h2 class="greet mb-1">100.000</h2>
+          <h2 class="greet mb-1" id="globalConfirmed"></h2>
           <span>Konfirmasi</span>
         </div>
-        <div class="bg-danger text-white m-1 p-1 pl-2 pr-2 rounded">
-          <h2 class="greet mb-1">100.000</h2>
-          <span>Meninggal</span>
-        </div>
         <div class="bg-success text-white m-1 p-1 pl-2 pr-2 rounded">
-          <h2 class="greet mb-1">100.000</h2>
+          <h2 class="greet mb-1" id="globalCure"></h2>
           <span>Sembuh</span>
+        </div>
+        <div class="bg-danger text-white m-1 p-1 pl-2 pr-2 rounded">
+          <h2 class="greet mb-1" id="globalDeath"></h2>
+          <span>Meninggal</span>
         </div>
       </div>
       <div class="d-block mt-2">

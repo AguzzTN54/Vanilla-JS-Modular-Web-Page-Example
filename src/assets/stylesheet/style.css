@@ -528,7 +528,7 @@ nav a {
   color: #ffffff;
   opacity: 0.6;
 }
-nav a:hover {
+nav a:hover, nav a.active {
   opacity: 1;
 }
 nav .brand {
@@ -554,7 +554,7 @@ nav .navbar-content .navbar-item::after {
   border-bottom: 1.5px solid #ffc01f;
   transition: all 0.1s;
 }
-nav .navbar-content .navbar-item:hover::after {
+nav .navbar-content .navbar-item:hover::after, nav .navbar-content .navbar-item.active::after {
   width: 70%;
 }
 
@@ -778,6 +778,8 @@ nav .navbar-content .navbar-item:hover::after {
   border-radius: 50px;
   cursor: pointer;
   transition: 0.2s;
+  display: flex;
+  justify-content: space-between;
 }
 .select-country .selected:hover {
   background-color: #fafafa;
@@ -789,6 +791,15 @@ nav .navbar-content .navbar-item:hover::after {
   top: 12px;
   right: 20px;
   font-weight: bold;
+}
+.select-country .selected .loading {
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/virus-2.svg);
+  background-size: contain;
+  animation: rotate 1.5s linear infinite;
+  margin-right: 30px;
+  opacity: 0.5;
 }
 .select-country country-list {
   position: absolute;

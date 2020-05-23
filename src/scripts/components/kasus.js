@@ -1,4 +1,4 @@
-import './sebaran'
+import './selectbox'
 import './kasus-item'
 class kasus extends HTMLElement {
   constructor() {
@@ -11,6 +11,11 @@ class kasus extends HTMLElement {
   }
 
   render() {
+
+    // Menghilangkan Loading
+    const loading = document.querySelector('.loading')
+    loading.style.display = 'none'
+
     this.innerHTML = ''
     const cases = Object.entries(this._cases),
       lokasiID = document.querySelector('.is-selected').getAttribute('country-id')

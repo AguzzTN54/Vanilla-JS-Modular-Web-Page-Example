@@ -2,7 +2,7 @@ import {
   buatELement,
   showHide
 } from '../functions'
-import './sebaran-country'
+import './selectbox-list'
 
 const persebaran = (async () => {
   const sebaran = await buatELement('main', 'body')
@@ -18,7 +18,8 @@ const selectCountry = async () => {
 
   country.innerHTML = `<h3 class="heading heading-2 txt-center strong">Pilih Negara</h3>
   <div class="selected shadow">
-    GLOBAL
+    <span class="now">GLOBAL</span>
+    <span class="loading"></span>
   </div>
   <span class="d-block txt-center" style="font-size: 0.9em; position: relative; z-index: -1;">Sumber : <a href="#" id="sumber" target="_blank"></a></span>
   

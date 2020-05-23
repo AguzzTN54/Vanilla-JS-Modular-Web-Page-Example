@@ -1,3 +1,7 @@
+import {
+  formatNum
+} from "../functions";
+
 class caseItem extends HTMLElement {
   constructor() {
     super()
@@ -49,15 +53,15 @@ class caseItem extends HTMLElement {
     <h3 class="heading heading-1 strong">${negara}</h3>
     <div class="cases txt-center txt-white mt-1">
       <div class="confirm bg-warning rounded p-1">
-        <h2 class="mb-1">${konfirmasi}</h2>
+        <h2 class="mb-1">${formatNum(konfirmasi)}</h2>
         <span>Konfirmasi</span>
       </div>
       <div class="death bg-danger rounded p-1">
-        <h2 class="mb-1">${meninggal}</h2>
+        <h2 class="mb-1">${formatNum(meninggal)}</h2>
         <span>Meninggal</span>
       </div>
       <div class="recover bg-success rounded p-1">
-        <h2 class="mb-1">${sembuh}</h2>
+        <h2 class="mb-1">${formatNum(sembuh)}</h2>
         <span>Sembuh</span>
       </div>
     </div>

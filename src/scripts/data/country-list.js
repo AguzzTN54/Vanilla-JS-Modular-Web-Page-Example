@@ -1,3 +1,7 @@
+import {
+  formatNum
+} from "../functions";
+
 class dataCountry {
   static getList() {
     this.api = 'https://api.allorigins.win/raw?url='
@@ -7,10 +11,24 @@ class dataCountry {
       .then((responseJSON) => {
         const targetElemen = document.querySelector('country-list')
         targetElemen.countries = responseJSON.countries;
+        this.getGlobalCase()
 
-        this.getCaseData()
       }).catch(err => {
         console.error('Terjadi Kesalahan Bebs ' + err)
+      })
+  }
+
+  static getGlobalCase() {
+    fetch(this.api + 'https://covid19.mathdro.id/api/')
+      .then(response => response.json())
+      .then(responseJSON => {
+        const confirmed = document.querySelector('#globalConfirmed'),
+          cure = document.querySelector('#globalCure'),
+          death = document.querySelector('#globalDeath')
+
+        confirmed.innerHTML = formatNum(responseJSON.confirmed.value)
+        cure.innerHTML = formatNum(responseJSON.recovered.value)
+        death.innerHTML = formatNum(responseJSON.deaths.value)
       })
   }
 

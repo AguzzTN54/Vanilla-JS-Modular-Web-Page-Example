@@ -5,11 +5,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Persebaran Virus Covid19</title>
+
+  <style>
+    #root {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #root>img {
+      animation: 2s rotate infinite linear;
+      margin: 20px;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div id="root"></div>
-  <img src="<%=require('./assets/images/pencegahan/berobat.svg').default%>" />
+  <div id="root">
+    <img src="<%=require('./assets/images/virus-2.svg').default%>" />
+    Mohon Tunggu Sebentar ...
+  </div>
 </body>
 
 </html>

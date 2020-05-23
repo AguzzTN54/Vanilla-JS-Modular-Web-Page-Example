@@ -13,6 +13,16 @@ class cegahGejala {
       console.error('Eror Bebs ' + err)
     })
   }
+
+  static pencegahanList() {
+    return new Promise(resolve => {
+      const element = document.querySelector('cegah-list')
+      element.cegah = pencegahan
+      resolve(element)
+    }).catch(err => {
+      console.error('Eror Bebs ' + err)
+    })
+  }
 }
 
 export default cegahGejala

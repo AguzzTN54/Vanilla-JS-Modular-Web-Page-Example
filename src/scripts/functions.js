@@ -3,7 +3,7 @@ const buatELement = (namaEl, target) => {
     const elemen = document.createElement(namaEl),
       trgt = document.querySelector(target)
     trgt.appendChild(elemen)
-    resolve(document.querySelector(target).querySelector(namaEl))
+    resolve(elemen)
   })
 }
 
@@ -13,7 +13,27 @@ const showHide = () => {
   list.classList.toggle("show");
 };
 
+const formatNum = (number) => {
+  return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+}
+
+const onScrollEvent = () => {
+  const nav = document.querySelector("nav"),
+    toTop = document.querySelector(".munggah");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      nav.classList.add("fixed");
+      toTop.style.display = "block";
+    } else {
+      toTop.style.display = "none";
+      nav.classList.remove("fixed");
+    }
+  });
+}
+
 export {
   buatELement,
-  showHide
+  showHide,
+  formatNum,
+  onScrollEvent
 }

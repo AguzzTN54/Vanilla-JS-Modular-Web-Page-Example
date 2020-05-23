@@ -1,7 +1,7 @@
 import {
   showHide
 } from '../functions'
-import "./sebaran-country-item";
+import "./selectbox-list-item";
 import dataCountry from '../data/country-list'
 
 class selectCountry extends HTMLElement {
@@ -23,6 +23,7 @@ class selectCountry extends HTMLElement {
         <country-item country-id="id"><i class="flag flag-id"></i> INDONESIA</country-item>
     </div>`
 
+    // Memecah data Countries
     const data = Object.entries(this._countries)
     data.forEach(country => {
       const listElement = document.createElement('country-item')
@@ -32,7 +33,6 @@ class selectCountry extends HTMLElement {
 
     // Mengambil nilai dari input nama negara
     const search = document.querySelector(".search-country");
-
     search.addEventListener("keyup", function () {
       const filter = this.value.toUpperCase();
       for (let i = 0; i < select.length; i++) {
@@ -46,7 +46,6 @@ class selectCountry extends HTMLElement {
     });
 
     const select = document.querySelectorAll("country-item")
-
     for (let i = 0; i < select.length; i++) {
       select[i].addEventListener("click", function () {
         const isSelected = document.querySelector(".is-selected"),
@@ -56,10 +55,12 @@ class selectCountry extends HTMLElement {
         if (isSelected) {
           isSelected.classList.remove("is-selected");
         }
-        document.querySelector(".selected").innerHTML = name;
+        document.querySelector(".now").innerHTML = name;
         this.classList.add("is-selected");
+        document.querySelector('.loading').style.display = ''
         showHide();
 
+        // menampilkan data persebaran di negara terpilih
         dataCountry.getCaseData(countryId)
       });
     }
