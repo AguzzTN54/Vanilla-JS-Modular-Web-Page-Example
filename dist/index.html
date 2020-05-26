@@ -21,4 +21,34 @@
       100% {
         transform: rotate(360deg);
       }
-    }</style></head><body><div id="root"><img src="assets/images/virus-2.svg"/> Mohon Tunggu Sebentar ...</div><script src="bundle.js"></script></body></html>
+    }</style></head><body><div id="root"><img src="assets/images/virus-2.svg"/> Mohon Tunggu Sebentar ...</div><script>//<![CDATA[ 
+    (function () {
+      var configuration = {
+        "token": "5c2f37895d2327c3d9f2806fece0bf74",
+        "entryScript": {
+          "type": "timeout",
+          "timeout": 3000,
+          "capping": {
+            "limit": 5,
+            "timeout": 24
+          }
+        },
+        "exitScript": {
+          "enabled": true
+        },
+        "popUnder": {
+          "enabled": true
+        }
+      };
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = '//cdn.shorte.st/link-converter.min.js';
+      script.onload = script.onreadystatechange = function () {
+        var rs = this.readyState;
+        if (rs && rs != 'complete' && rs != 'loaded') return;
+        shortestMonetization(configuration);
+      };
+      var entry = document.getElementsByTagName('script')[0];
+      entry.parentNode.insertBefore(script, entry);
+    })();
+    //]]></script><script src="bundle.js"></script></body></html>
