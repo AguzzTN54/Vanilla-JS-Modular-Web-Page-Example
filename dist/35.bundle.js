@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[35],{43:function(s,a,n){"use strict";n.r(a),a.default=n.p+"assets/provinsi/nusa-tenggara-barat.svg"}}]);

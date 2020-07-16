@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{28:function(s,o,n){"use strict";n.r(o),o.default=n.p+"assets/provinsi/gorontalo.svg"}}]);

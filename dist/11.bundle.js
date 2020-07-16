@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{65:function(a,s,n){"use strict";n.r(s),s.default=n.p+"assets/pencegahan/olahraga.svg"}}]);

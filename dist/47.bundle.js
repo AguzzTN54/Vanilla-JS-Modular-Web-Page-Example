@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[47],{55:function(s,a,n){"use strict";n.r(a),a.default=n.p+"assets/provinsi/sumatera-utara.svg"}}]);

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{32:function(s,i,n){"use strict";n.r(i),i.default=n.p+"assets/provinsi/jawa-timur.svg"}}]);

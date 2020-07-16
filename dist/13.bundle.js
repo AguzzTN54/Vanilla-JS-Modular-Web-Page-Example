@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{67:function(a,s,n){"use strict";n.r(s),s.default=n.p+"assets/pencegahan/waspada-hewan.svg"}}]);

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[39],{47:function(s,i,n){"use strict";n.r(i),i.default=n.p+"assets/provinsi/riau.svg"}}]);

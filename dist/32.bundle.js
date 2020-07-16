@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[32],{40:function(s,n,p){"use strict";p.r(n),n.default=p.p+"assets/provinsi/lampung.svg"}}]);

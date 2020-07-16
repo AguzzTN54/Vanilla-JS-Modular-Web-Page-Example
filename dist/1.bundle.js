@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{68:function(s,e,i){"use strict";i.r(e),e.default=i.p+"assets/images/flu-girl.svg"}}]);

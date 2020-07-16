@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[30],{38:function(n,s,a){"use strict";a.r(s),s.default=a.p+"assets/provinsi/kepulauan-bangka-belitung.svg"}}]);

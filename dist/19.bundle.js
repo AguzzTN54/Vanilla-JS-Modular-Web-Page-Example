@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[19],{27:function(s,a,i){"use strict";i.r(a),a.default=i.p+"assets/provinsi/dki-jakarta.svg"}}]);

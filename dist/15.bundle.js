@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{23:function(s,i,n){"use strict";n.r(i),i.default=n.p+"assets/provinsi/bali.svg"}}]);

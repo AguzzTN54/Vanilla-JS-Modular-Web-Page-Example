@@ -13,4 +13,4 @@ Contoh penerapan Web Component dalam membuat halaman website.
 - Menggunakan Custom Element
 - Menggunakan Konsep modular element
 
-Lihat [Demo](https://aguzztn54.github.io/Native-JS-Modular-Web-Page-Example/dist/)
+Lihat [Demo](https://aguzztn54.github.io/Native-JS-Modular-Web-Page-Example)

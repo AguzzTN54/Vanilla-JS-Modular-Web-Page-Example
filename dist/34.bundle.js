@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[34],{42:function(s,n,p){"use strict";p.r(n),n.default=p.p+"assets/provinsi/maluku.svg"}}]);

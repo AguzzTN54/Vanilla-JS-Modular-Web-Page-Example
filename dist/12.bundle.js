@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{66:function(s,a,e){"use strict";e.r(a),a.default=e.p+"assets/pencegahan/stay-at-home.svg"}}]);

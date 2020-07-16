@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{56:function(s,a,e){"use strict";e.r(a),a.default=e.p+"assets/gejala/batuk.svg"}}]);

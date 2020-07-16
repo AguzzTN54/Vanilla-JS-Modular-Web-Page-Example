@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[37],{45:function(s,p,a){"use strict";a.r(p),p.default=a.p+"assets/provinsi/papua-barat.svg"}}]);
