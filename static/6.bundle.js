@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{60:function(s,e,n){"use strict";n.r(e),e.default=n.p+"assets/pencegahan/berobat.svg"}}]);

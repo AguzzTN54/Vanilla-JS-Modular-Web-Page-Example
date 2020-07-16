@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{62:function(n,a,s){"use strict";s.r(a),a.default=s.p+"assets/pencegahan/makanan-seimbang.svg"}}]);

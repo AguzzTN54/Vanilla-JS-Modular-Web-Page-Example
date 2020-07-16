@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[44],{52:function(s,a,i){"use strict";i.r(a),a.default=i.p+"assets/provinsi/sulawesi-utara.svg"}}]);
