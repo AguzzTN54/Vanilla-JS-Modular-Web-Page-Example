@@ -1,4 +1,4 @@
-# Native JS Modular Web Page Example
+# Vanila JS Modular Web Page Example
 Contoh penerapan Web Component dalam membuat halaman website.
 
 ### How to Use
@@ -13,4 +13,4 @@ Contoh penerapan Web Component dalam membuat halaman website.
 - Menggunakan Custom Element
 - Menggunakan Konsep modular element
 
-Lihat [Demo](https://aguzztn54.github.io/Native-JS-Modular-Web-Page-Example)
+Lihat [Demo](https://aguzztn54.github.io/Vanilla-JS-Modular-Web-Page-Example)
